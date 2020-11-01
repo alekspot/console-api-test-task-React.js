@@ -1,0 +1,88 @@
+.header {
+    display: flex;
+    align-items: center;
+    background: #F6F6F6;
+    padding: 10px 15px;
+
+    &__logo {
+       margin-right: 20px;
+    }
+
+    &__title {
+        font-size: 20px;
+    }
+
+    &__profile {
+        margin-left: auto;
+        margin-right: 30px;
+    }
+
+    &__logout {
+        span {
+            margin-right: 5px;
+        }
+    }
+}
+
+
+
+
+.profile {
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 5px 15px;
+    border-radius: 5px;
+    
+    &__gutter {
+        margin: 0 5px;
+    }
+
+}
+
+.btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+   
+
+}
+
+
+
+.test {
+    position: relative;
+    display: flex;
+    margin: 0 100px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: #000;
+}
+
+.test::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+
+    // сделаьб круглым
+    border-radius: 100%;
+    background: blue;
+    // сбособ пренести элемент
+    
+    left: -20px;
+}
+
+.test::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: red;
+    left: 20px;
+}

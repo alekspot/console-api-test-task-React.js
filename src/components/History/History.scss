@@ -1,0 +1,46 @@
+.history {
+    position: relative;
+    display: flex;
+    background: #F6F6F6;
+    height: 50px;
+    justify-content: space-between;
+    border-top: solid 1px #cccccc;
+    border-bottom: solid 1px #cccccc;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 15px;
+      background: linear-gradient(269.93deg, #F6F6F6 0.06%, rgba(246, 246, 246, 0) 99.93%);
+      right: 51px;
+    }
+
+    &__items {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      overflow-x: auto;
+      padding-left: 15px;
+    }
+
+    &__item {
+      margin-right: 10px;
+    }
+
+    &__btn {
+      position: relative;
+      line-height: 0;
+      background: none;
+      border: none;
+      outline: none;
+      padding: 0 15px;
+      border-left: solid 1px #cccccc;
+    }
+}
+
+.history ::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}

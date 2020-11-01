@@ -1,0 +1,129 @@
+.dropdown {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+
+  &__placeholder {
+    display: flex;
+    height: 30px;
+  }
+
+  &__btn {
+    display: flex;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    min-width: 8px;
+    text-align: center;
+  }
+  &__icon {
+    display: flex;
+    align-items: center;
+
+    &--left {
+      padding: 0 5px;
+    }
+
+    &--right {
+      padding: 0 7px;
+    }
+  }
+
+  &__menu {
+    position: fixed;
+    margin: 0;
+    padding: 5px 0;
+    list-style: none;
+    background: #fff;
+    z-index: 1000;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+
+    &--top {
+      .dropdown__item:last-child {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+      }
+    }
+  }
+
+  &__item {
+    &:last-child {
+      margin-top: 5px;
+      padding-top: 5px;
+      border-top: 1px solid #cccccc;
+    }
+    
+  }
+
+  &__action {
+    padding: 11px 15px;
+    color: $black;
+
+    &--red:hover, &--blue:hover {
+      color: #fff;
+    }
+
+    &--red:hover {
+      background: #CF2C00;
+    }
+    &--blue:hover {
+      background: #0055FB;
+    }
+  }
+
+  &__msg {
+    position: absolute;
+    background: #F6F6F6;
+    color: $black;
+    padding: 3.5px 10px;
+    font-size: 12px;
+    z-index: 1000;
+    top: 5px;
+    display: none;
+    border-radius: 5px;
+    
+    &-enter {
+      display: block;
+      opacity: 0;
+    }
+    &-enter-active {
+      opacity: 1;
+      transition: all ease 600ms;
+    }
+
+    &-exit {
+      opacity: 1;
+      display: block;
+    }
+
+    &-exit-active {
+      top: -5px;
+      opacity: 0;
+      transition: all ease 600ms;
+    }
+  }
+}
+
+.icon-status {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+
+  &--green {
+    background: #30B800;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  &--red {
+    background: #CF2C00;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+}

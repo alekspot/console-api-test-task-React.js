@@ -1,0 +1,29 @@
+.form-error {
+    display: flex;
+    padding: 10px 12px;
+    background: rgba(207, 44, 0, 0.1);
+    border-radius: 5px;
+
+    &__icon {
+        margin-top: 5px;
+    }
+
+    &__msg {
+        margin-left: 5px;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 18px;
+        line-height: 30px;
+        color: #CF2C00;
+        font-weight: normal;
+    }
+    
+    &__text {
+        color: #CF2C00;
+        opacity: 0.5;
+        font-size: 12px;
+        line-height: 20px;
+    }
+}

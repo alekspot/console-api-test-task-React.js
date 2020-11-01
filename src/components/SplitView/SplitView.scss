@@ -1,0 +1,54 @@
+.split-view {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    padding: 10px 15px 0;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__gutter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: col-resize;
+        margin-top: 20px;
+
+        &:hover &-icon,
+        &:hover &-icon::after,
+        &:hover &-icon::before {
+            background:#878787;
+        }
+
+    }
+
+}
+
+@mixin action {
+    display: block;
+    background: #cccccc;
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+}
+
+.action {
+    position: relative;
+    @include action;
+    &::after, &::before {
+        content: '';
+        position: absolute;
+        @include action;
+    }
+
+    &::after {
+        top: -150%;
+    }
+
+    &::before {
+        bottom: -150%;
+    }
+}
